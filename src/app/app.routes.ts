@@ -5,5 +5,8 @@ export const routes: Routes = [
   { path: 'dashboard', loadComponent: () => import('./components/dashboard/dashboard.component').then(m => m.DashboardComponent) },
   { path: 'videos', loadComponent: () => import('./components/videos/videos.component').then(m => m.VideosComponent) },
   { path: 'stats', loadComponent: () => import('./components/stats/stats.component').then(m => m.StatsComponent) },
-  { path: 'widget', loadComponent: () => import('./components/widget/widget.component').then(m => m.WidgetComponent) }
+  { path: 'widget', loadComponent: () => import('./components/widget/widget.component').then(m => m.WidgetComponent) },
+  { path: 'impressum', loadComponent: () => import('./components/legal/impressum/impressum.component').then(m => m.ImpressumComponent) },
+  { path: 'privacy', loadComponent: () => import('./components/legal/privacy/privacy.component').then(m => m.PrivacyComponent) },
+  { path: 'terms', loadComponent: () => import('./components/legal/terms/terms.component').then(m => m.TermsComponent) }
 ];

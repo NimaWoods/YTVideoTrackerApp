@@ -35,6 +35,13 @@ declare const google: any;
               Hinweis: Sie können einen API Key in der
               <a href="https://console.cloud.google.com/" target="_blank">Google Cloud Console</a> erstellen.
             </p>
+            <div class="legal-links-footer">
+              <a routerLink="/impressum">Impressum</a>
+              <span class="separator">|</span>
+              <a routerLink="/privacy">Datenschutz</a>
+              <span class="separator">|</span>
+              <a routerLink="/terms">Nutzungsbedingungen</a>
+            </div>
           </div>
         </div>
 
@@ -47,6 +54,15 @@ declare const google: any;
             <a routerLink="/widget" routerLinkActive="active">Widget</a>
           </nav>
           <router-outlet></router-outlet>
+          <footer class="app-footer">
+            <div class="legal-links">
+              <a routerLink="/impressum">Impressum</a>
+              <span class="separator">|</span>
+              <a routerLink="/privacy">Datenschutz</a>
+              <span class="separator">|</span>
+              <a routerLink="/terms">Nutzungsbedingungen</a>
+            </div>
+          </footer>
         </div>
       </main>
     </div>
@@ -70,6 +86,15 @@ declare const google: any;
     .nav-tabs a.active { background: #FF0000; color: white; }
     .main-content { max-width: 1200px; margin: 0 auto; }
     .btn-google { display: flex; align-items: center; justify-content: center; background: white; border: 1px solid #ddd; padding: 12px 24px; border-radius: 4px; cursor: pointer; font-size: 16px; margin-top: 1rem; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+    .app-footer { margin-top: 2rem; padding: 1rem; text-align: center; border-top: 1px solid #ddd; }
+    .legal-links { display: flex; justify-content: center; align-items: center; gap: 0.5rem; font-size: 0.85rem; }
+    .legal-links a { color: #666; text-decoration: none; }
+    .legal-links a:hover { color: #FF0000; text-decoration: underline; }
+    .legal-links .separator { color: #ccc; }
+    .legal-links-footer { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #eee; display: flex; justify-content: center; align-items: center; gap: 0.5rem; font-size: 0.8rem; }
+    .legal-links-footer a { color: #666; text-decoration: none; }
+    .legal-links-footer a:hover { color: #FF0000; text-decoration: underline; }
+    .legal-links-footer .separator { color: #ccc; }
   `]
 })
 export class App implements OnInit, OnDestroy {
