@@ -34,7 +34,9 @@ jobs:
         run: npm ci --legacy-peer-deps
 
       - name: Build
-        run: npm run build -- --base-href=/YTVideoTrackerApp/
+        run: |
+          npm run build -- --base-href=/YTVideoTrackerApp/
+          sed -i 's|<base href="/">|<base href="/YTVideoTrackerApp/">|g' dist/keppasjonpeckapp/browser/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

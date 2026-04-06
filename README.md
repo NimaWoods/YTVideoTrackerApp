@@ -46,4 +46,17 @@ npx ng serve
 npx ng build --configuration production
 ```
 
+## Android Build & Deploy
+
+```bash
+npx ng build --configuration production
+npx cap sync
+cd android
+./gradlew assembleDebug
+adb install -r app/build/outputs/apk/debug/app-debug.apk
+adb shell am start -n com.youtubetracker.app/.MainActivity
+```
+
+---
+
 Dieses Projekt wurde mit Angular CLI 21.2.6 erstellt.
