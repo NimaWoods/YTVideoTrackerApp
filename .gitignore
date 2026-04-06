@@ -39,6 +39,34 @@ testem.log
 /typings
 __screenshots__/
 
-# System files
-.DS_Store
-Thumbs.db
+# Secrets and environment files
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.test
+
+# API Keys and credentials
+**/google-services.json
+**/GoogleService-Info.plist
+firebase-config.json
+
+# Android signing
+*.jks
+*.keystore
+key.properties
+
+# iOS signing
+*.p12
+*.mobileprovision
+
+# Capacitor config with secrets
+capacitor.config.ts
+!capacitor.config.ts.example
+
+# Misc secrets
+secrets.json
+config.local.json
+*.secret.*
+**/*.secret

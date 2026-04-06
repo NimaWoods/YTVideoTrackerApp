@@ -1,59 +1,49 @@
-# Keppasjonpeckapp
+# YouTube Video Tracker
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.6.
+Eine Progressive Web App (PWA) zum Tracken von YouTube-Videos mit automatischen Updates, Statistiken und Widget-Unterstützung.
 
-## Development server
+## Features
 
-To start a local development server, run:
+1. **Google Login** - Authentifizierung mit Google Account
+2. **YouTube Video Tracking** - Tracken Sie Videos und sehen Sie aktuelle Statistiken
+3. **Automatische Updates** - Jede Stunde automatische Aktualisierung der Daten
+4. **Widget-Ansicht** - Optimale Ansicht für Home-Screen-Widgets (Views-Anzeige)
+5. **Statistiken & Diagramme** - Detaillierte Performance-Analyse:
+   - Views letztes Jahr
+   - Views letzter Monat
+   - Aktuelle Views, Likes, Comments
+   - Historische Daten als Linien-Diagramm
 
-```bash
-ng serve
-```
+## Installation als App
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Android (Chrome)
+1. Öffnen Sie die App in Chrome
+2. Tippen Sie auf das 3-Punkte-Menü
+3. Wählen Sie "Zum Startbildschirm hinzufügen"
 
-## Code scaffolding
+### iOS (Safari)
+1. Öffnen Sie die App in Safari
+2. Tippen Sie auf das Teilen-Symbol
+3. Wählen Sie "Zum Home-Bildschirm"
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Setup
 
-```bash
-ng generate component component-name
-```
+1. Erstellen Sie eine Google OAuth Client ID in der [Google Cloud Console](https://console.cloud.google.com/)
+2. Aktivieren Sie die YouTube Data API v3
+3. Erstellen Sie einen API Key
+4. Tragen Sie beide Keys in `src/app/app.config.ts` und `src/app/app.ts` ein
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Entwicklung
 
 ```bash
-ng test
+npm install
+npx ng serve
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+## Build
 
 ```bash
-ng e2e
+npx ng build --configuration production
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Dieses Projekt wurde mit Angular CLI 21.2.6 erstellt.
